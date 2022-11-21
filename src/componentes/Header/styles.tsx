@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-export const Menu = styled.ul`
+export const UlStyle = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
 `
-export const Item = styled.li`
+export const LiStyle = styled.li`
   float: left;
   display: block;
   color: white;
@@ -18,7 +18,7 @@ export const Item = styled.li`
     background-color: #4848;
   }
 `
-export const styledLink = styled.a`
+export const AStyle = styled.a`
   display: block;
   color: white;
   text-align: center;

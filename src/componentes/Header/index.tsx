@@ -1,4 +1,4 @@
-import {Menu,Item} from './styles';
+import {UlStyle,LiStyle} from './styles';
 import dataMenu from '../../database/dataMenu.json';
 import { Outlet, Link } from "react-router-dom";
 
@@ -6,11 +6,15 @@ export default function Header()
 {
     return(
         <>
-            <Menu>
+            <UlStyle>
                 {dataMenu.map((item,index)=>(
-                    <Item><Link style={{ color: "white", textDecoration: "none"}} to={`/${item}`} key={index}>{item}</Link></Item>
+                    
+                <Link className="linkRoute" to={`/${item}`}>
+                    <LiStyle key={index}>{item}</LiStyle>
+                </Link>
+                    
                 ))}
-            </Menu>
+            </UlStyle>
             <Outlet />
         </>
     )

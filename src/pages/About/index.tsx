@@ -6,8 +6,7 @@ export default function About()
     return(
         <>
             <AboutStyle>
-                <ImageBackStyle>
-                </ImageBackStyle>
+                <ImageBackStyle/>
             </AboutStyle>
         </>
     )
