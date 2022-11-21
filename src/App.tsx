@@ -1,16 +1,25 @@
-import React,{useState} from 'react';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
+import About from './pages/About';
+import React from 'react';
+import Header from './componentes/Header';
+import Footer from './componentes/Footer';
+import NoPage from "./pages/NoPage";
 
-function App() {
-
-  const [palavra,setPalavra] = useState("")
+export default function App() {
 
   return (
-    <div className="App">
-      <h1>{palavra}</h1>
-      <input type="text" onChange={text => setPalavra(text.target.value)}/>
-    </div>
+    <>
+    <BrowserRouter>
+    <Routes>
+        <Route path="/" element={<Header />}>
+          <Route path="home" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+    <Footer/>
+    </>
   );
 }
-
-export default App;
