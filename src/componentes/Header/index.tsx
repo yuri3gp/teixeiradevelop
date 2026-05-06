@@ -1,20 +1,30 @@
-import {UlStyle,LiStyle} from './styles';
+import { UlStyle, LiStyle, NavStyle, BrandStyle } from './styles';
 import dataMenu from '../../database/dataMenu.json';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
+
+const sectionMap: Record<string, string> = {
+    Inicio: '#inicio',
+    Produto: '#produto',
+    Empresa: '#empresa',
+    Contato: '#contato'
+};
 
 export default function Header()
 {
     return(
         <>
-            <UlStyle>
-                {dataMenu.map((item,index)=>(
-                    
-                <Link className="linkRoute" to={`/${item}`}>
-                    <LiStyle key={index}>{item}</LiStyle>
-                </Link>
-                    
-                ))}
-            </UlStyle>
+                        <NavStyle>
+                            <BrandStyle href="#inicio">Teixeira Develop</BrandStyle>
+                            <UlStyle>
+                                {dataMenu.map((item) => (
+                                    <LiStyle key={item}>
+                                        <a className="linkRoute" href={sectionMap[item] ?? '#inicio'}>
+                                            {item}
+                                        </a>
+                                    </LiStyle>
+                                ))}
+                            </UlStyle>
+                        </NavStyle>
             <Outlet />
         </>
     )

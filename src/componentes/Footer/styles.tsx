@@ -2,17 +2,26 @@ import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
   text-align: center;
-  padding: 3px;
-  height: 50px;
-  background-color: #333;
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
-`
+  padding: 22px 6vw 26px;
+  margin-top: 56px;
+  background: #040a17;
+  border-top: 1px solid rgba(127, 207, 255, 0.2);
+  color: #d8e8ff;
+
+  p {
+    margin: 0 0 8px;
+  }
+
+  small {
+    color: #8eb2dd;
+  }
+`;
 
 export const StyledLink = styled.a`
-  color : white;
+  color: #8df8ea;
   text-decoration: none;
-  &:hover{
-    background-color: #4848;
+
+  &:hover {
+    text-decoration: underline;
   }
-`
+`;
