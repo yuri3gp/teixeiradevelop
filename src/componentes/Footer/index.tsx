@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledFooter, StyledLink } from './styles'
+import { StyledFooter, StyledLink, StyledRouterLink } from './styles'
 
 export default function Footer()
 {
@@ -15,6 +15,11 @@ export default function Footer()
                                 <StyledLink href="tel:+553197300623">(31) 9730-0623</StyledLink>
                                 {' | '}
                                 <StyledLink href="https://wa.me/55319973006233" target="_blank" rel="noreferrer">WhatsApp</StyledLink>
+                            </p>
+                            <p>
+                                <StyledRouterLink to="/politica-de-privacidade">Politica de Privacidade</StyledRouterLink>
+                                {' | '}
+                                <StyledRouterLink to="/termos-de-uso">Termos de Uso</StyledRouterLink>
                             </p>
                             <small>{currentYear} Todos os direitos reservados.</small>
             </StyledFooter>

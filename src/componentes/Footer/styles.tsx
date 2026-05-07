@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 export const StyledFooter = styled.footer`
   text-align: center;
@@ -18,6 +19,15 @@ export const StyledFooter = styled.footer`
 `;
 
 export const StyledLink = styled.a`
+  color: #8df8ea;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const StyledRouterLink = styled(Link)`
   color: #8df8ea;
   text-decoration: none;
 
